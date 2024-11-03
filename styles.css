@@ -1,0 +1,398 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+/* Navbar base styling */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.4s ease; /* Smooth transition on scroll */
+    font-family: 'Poppins', sans-serif;
+}
+/* brand title */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e0810c;
+    transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: #45b8e2; /* Color change on hover */
+}
+
+.brand-title {
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Make it bold */
+    color: #5c4d7d; /* Primary color for text */
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.7), 
+        2px 2px 0px rgba(255, 255, 255, 0.6), 
+        3px 3px 0px rgba(255, 255, 255, 0.5), 
+        4px 4px 0px rgba(255, 255, 255, 0.4), 
+        5px 5px 0px rgba(255, 255, 255, 0.3); /* Creating depth */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+.brand-title:hover {
+    transform: translateZ(10px); /* Raise the text on hover */
+}
+.nav-link {
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background-color: #e0810c; /* Background on hover */
+    border-radius: 5px;
+}
+
+.nav-log {
+    border: 2px solid #45b8e2;
+    color: #45b8e2;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.nav-log:hover {
+    background-color: #45b8e2;
+    color: #fff;
+    border-color: #45b8e2;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background-color: #45b8e2;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Sticky and transparent navbar effect */
+.sticky-top {
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.4s ease;
+}
+
+.sticky-top.scrolled {
+    background-color: #fff; /* Solid background when scrolled */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-link {
+        margin: 10px 0;
+    }
+    .nav-log {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+/* Home Section */
+.home-section {
+    padding-top: 70px; /* Adjust to match navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-image: url('assest/backgroun.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.home-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.home-content h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.home-content .cta-button {
+    padding: 0.8rem 2rem;
+    background-color: #e86c7a;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+}
+
+.home-content .cta-button:hover {
+    background-color: #f5a646;
+    box-shadow: 0 0 15px #f5a646, 0 0 25px #e86c7a;
+    transform: translateY(-5px);
+}
+
+/* Section Styling */
+section {
+    padding: 50px 0; /* Added padding for spacing */
+}
+
+/* Image Container */
+.image-container {
+    width: 45%;
+    position: relative;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        width: 80%;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-content .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 5%;
+    background: linear-gradient(135deg, #f5a646, #e86c7a);
+    box-shadow: 0 0 20px rgba(240, 224, 224, 0.2);
+}
+
+/* Description Box Styling */
+.about-content-box {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.836);
+    max-width: 100%;
+    color: #073b5e;
+    text-align: left;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Box */
+.about-content-box:hover {
+    background-color: #b4d6d2;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings and Paragraphs */
+.about-content-box h2 {
+    font-size: 2.5rem;
+    color: #073b5e;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.about-content-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* CTA Button */
+.about-content-box .cta-button {
+    padding: 0.8rem 1.8rem;
+    background-color: #073b5e;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-content-box .cta-button:hover {
+    background-color: #e86c7a;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* About Image */
+.about-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-image-container img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.76);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image-container:hover img {
+    transform: scale(1.05);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.688);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding-top: 2rem;
+    }
+
+    .about-content-box {
+        max-width: 100%;
+    }
+
+    .about-image-container img {
+        max-width: 80%;
+    }
+
+    .about-content-box h2 {
+        font-size: 2rem;
+    }
+
+    .about-content-box p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Contact Section Styling */
+.contact-section {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Gradient background for a modern look */
+    padding: 60px 0; /* Increase vertical padding for better spacing */
+    text-align: center; /* Center align content */
+}
+
+/* Contact Info Box Styling */
+.contact-info {
+    background-color: #fff; /* Clean white background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    display: inline-block;
+    max-width: 80%;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+}
+
+/* Hover Effect for Contact Info */
+.contact-info:hover {
+    transform: translateY(-5px); /* Lift the box on hover */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Social Links Styling */
+.social-link {
+    display: inline-block;
+    margin: 0 10px; /* Spacing between icons */
+    transition: transform 0.3s ease;
+}
+
+/* Social Icon Styling */
+.social-icon {
+    width: 45px; /* Slightly larger social icons */
+    height: auto;
+    border-radius: 50%; /* Make icons circular */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for icons */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-info {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .social-icon {
+        width: 40px; /* Adjust icon size for smaller screens */
+    }
+}
+
+
