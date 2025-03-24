@@ -32,21 +32,35 @@ body, html {
     color: #45b8e2; /* Color change on hover */
 }
 
+/* Title Container */
+.title-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
 .brand-title {
+    font-family: cursive;
     font-size: 2rem; /* Adjust the font size as needed */
     font-weight: bold; /* Make it bold */
-    color: #5c4d7d; /* Primary color for text */
-    text-shadow: 
-        1px 1px 0px rgba(255, 255, 255, 0.7), 
-        2px 2px 0px rgba(255, 255, 255, 0.6), 
-        3px 3px 0px rgba(255, 255, 255, 0.5), 
-        4px 4px 0px rgba(255, 255, 255, 0.4), 
-        5px 5px 0px rgba(255, 255, 255, 0.3); /* Creating depth */
+    color: #ff69b4; /* Primary color for text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Creating depth */
     transition: transform 0.3s ease; /* Transition for hover effect */
+    animation: slide-in 3s ease-out;
 }
 
 .brand-title:hover {
     transform: translateZ(10px); /* Raise the text on hover */
+}
+
+/* Slide-in animation */
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 .nav-link {
     color: #333;
@@ -118,7 +132,7 @@ body, html {
 
 /* Home Section */
 .home-section {
-    padding-top: 70px; /* Adjust to match navbar height */
+    padding-top: 90px; /* Adjust to match navbar height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,7 +238,55 @@ section {
     }
 }
 
+/* Services Section */
+.services-section {
+    background: linear-gradient(135deg, #f5a646, #e86c7a); /* Gradient background */
+    padding: 60px 0; /* Increase vertical padding for better spacing */
+    color: white; /* Text color */
+}
 
+.services-section h2 {
+    color: white; /* Heading color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+}
+
+.service-item {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for service items */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Lift the item on hover */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Products Section */
+.products-section {
+    background: linear-gradient(135deg, #c3cfe2, #f5f7fa); /* Gradient background */
+    padding: 60px 0; /* Increase vertical padding for better spacing */
+    color: #333; /* Text color */
+}
+
+.products-section h2 {
+    color: #333; /* Heading color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow for depth */
+}
+
+.product-item {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for product items */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Lift the item on hover */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
 
 /* About Section Styling */
 .about-section {
